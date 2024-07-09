@@ -4,9 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-os.environ["OPENAI_API_KEY"] = (
-    "sk-proj-UJ85WX1YennKvtYgZxgnT3BlbkFJ37Zx90buCyvPCpdFh9Wv"
-)
+os.environ["OPENAI_API_KEY"] = ""
 
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain.utilities.tavily_search import TavilySearchAPIWrapper
@@ -52,7 +50,7 @@ agent_executor = AgentExecutor(
     verbose=True,
 )
 
-# print(agent_executor.invoke({"input": "How is Anantha Narayanan and check from linkedin?"}))
+# print(agent_executor.invoke({"input": "who is Anantha Narayanan and check from linkedin?"}))
 
 
 def get_profile_url_tavily(name: str):
